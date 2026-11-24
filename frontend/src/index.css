@@ -1,0 +1,2 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#182033;background:#f7f8fc;font-synthesis:none} body{margin:0;min-width:320px} button,input{font:inherit} .card{background:white;border:1px solid #e8eaf2;border-radius:16px;padding:20px;box-shadow:0 5px 20px rgba(20,30,60,.035)} .btn{border-radius:10px;padding:10px 15px;font-weight:600} .btn-primary{background:#6555d9;color:white} .btn-secondary{background:#f0efff;color:#4e40b7} .muted{color:#687188} .stage-active{background:#edeaff;color:#5746c6}

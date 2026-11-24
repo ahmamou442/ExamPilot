@@ -1,0 +1,11 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.8
+SQLAlchemy>=2.0
+PyMuPDF>=1.24
+faiss-cpu>=1.8
+numpy>=1.26
+openai>=1.50
+openai-agents>=0.2
+python-dotenv>=1.0

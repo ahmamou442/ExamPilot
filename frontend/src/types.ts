@@ -1,0 +1,1 @@
+export type Course={id:string;title:string;description:string;status:string;knowledge_map?:any};export type Question={id:string;question:string;options:Record<string,string>;concept_id:string;position?:number;difficulty?:string};
