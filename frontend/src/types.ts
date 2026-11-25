@@ -1,1 +1,11 @@
-export type Course={id:string;title:string;description:string;status:string;knowledge_map?:any};export type Question={id:string;question:string;options:Record<string,string>;concept_id:string;position?:number;difficulty?:string};
+export type Concept = { id?: string; name: string; definition?: string; learning_objective?: string; prerequisites?: string[]; misconceptions?: string[]; source_refs?: string[] };
+export type Chapter = { title: string; description?: string; concepts: Concept[] };
+export type KnowledgeMap = { title?: string; description?: string; chapters?: Chapter[] };
+export type Course = { id: string; title: string; description?: string; status: 'processing' | 'ready' | 'failed' | string; knowledge_map?: KnowledgeMap; created_at?: string };
+export type Question = { id: string; question: string; options: Record<string, string>; concept_id: string; difficulty?: string };
+export type QuizDetail = { question_id: string; correct: boolean; explanation?: string; concept_id?: string };
+export type QuizResult = { score: number; total: number; percentage: number; details?: QuizDetail[]; concept_performance?: Record<string, { total: number; correct: number }> };
+export type DashboardCourse = { id: string; title: string; status: string; concepts_count: number; mastery?: Array<{ concept_id: string; status: string }>; exams_count?: number };
+export type Dashboard = { courses: DashboardCourse[]; demo_mode?: boolean };
+export type Assessment = { id: string; status: string; questions: Question[]; answers?: Record<string, string> };
+export type TeachingSession = { id: string; course_id?: string; concept_id?: string; stage?: 'motivate' | 'establish' | 'connect' | 'verify'; status?: 'active' | 'completed'; content?: string; history?: Array<{ stage: string; content: string }> };
